@@ -114,10 +114,10 @@ contract Foo {
 }
 ```
 ### Methodology
-![StaticAnalyzer](./images/StaticAnalyzer.PNG)
+![StaticAnalyzer](./images/StaticAnalyzer.jpg)
   SA-Solidity   contains 3 modules, PARSER,  XML  GENERATOR,  and  RULE CHECKER.  SA-Solidity  takes  source  code  of  the  smart contract  as  input.  The  PARSER  module  in  SA-Solidity converts these contracts to JSON parse tree by using Solidity Antlr  parser.  Then,  the  XML  GENERATOR  module converts  the  parse  tree  to  an  XML  tree.  The  purpose  of the  conversion  process  is  to  run  XPath  on  XML  which allows  SA-Solidity  to  create  flexible  queries.  Finally,  the RULE  CHECKER  module  queries  the  XML  trees  with XPath  queries  to  identify  bugs  and  reports  the  results  to the user.
 
-![BugPredictionEngine](./images/BugPredictionEngine.PNG)
+![BugPredictionEngine](./images/BugPredictionEngine.jpg)
   MLBP-Solidity  is  a  machine  learning  model  to  predict specific  bugs  on  Solidity  source  codes.  It  is  trained  by using SmartEmbed’s Solidity source code dataset. In order to  label  the  data,  we  analyzed  using  three  different  static analysis tool SA-Solidity, SmartCheck, and Securify. Apart from  these,  source  code  metrics  are  collected  by  Solmet. After this process, labelled data and source code metrics are merged.  Thus,  we  obtained  a  consolidated  data  processed with results from different tools. After these steps, different classifiers  were  used  on  the  data  to  train  the  model.  As  a result  of  this,  MLBP-Solidity  decide  whether  the  Solidity source code is buggy or not
   The  training  phase  of  MLBP-Solidity  uses  the  known synthetic  minority  over-sampling  technique  (SMOTE) to get rid of imbalances in the training data. MLBP-Solidity uses the imbalanced-learn package as the implementation of SMOTE. MLBP-Solidity  trains  Decision  Tree,  Random  Forest, Multi-Layer  Perceptron,  Naive  Bayes,  Support Vector Machines, K-Nearest Neighbour, Stochastic Gradient Descent, and  Gradient  Descent  as  classifiers.  These  classifiers are availably at the Scikit-learn Python library.
   
