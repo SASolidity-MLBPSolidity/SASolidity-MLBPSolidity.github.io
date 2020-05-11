@@ -8,6 +8,10 @@
 
 [Alper SEN](https://www.cmpe.boun.edu.tr/~sen/) - Bogazici University
 
+### To Check Our Tool && Engine
+
+[SA-Solidity && MLBP-Solidity](http://54.93.96.207:8080/home)
+
 ### Abstract
 As  blockchain  solutions  become  widespread,  iden-tifying  potential  bugs  in  smart  contracts  written  in  Solidity language  will  be  crucial  for  these  solutions  to  work  correctly.To accurately detect these bugs, the developer must use several state-of-the-art bug detection tools and investigate the potential bugs they report. In this study, we first show that one tool is not enough to detect all the bugs as our Static Analysis for Solidity tool  (SA-Solidity)  and  the  known  SmartCheck  and  Securify tools identify different bugs in SmartEmbed’s experimental setof smart contracts. Then, we develop Machine Learning-based Bug  Predictor  for  Solidity  (MLBP-Solidity)  which  predicts files  that would  be  reported  by all  the  previous bug  detection tools.  MLBP-Solidity  eases  the  burden  on  the  developer  by allowing  him/her  to  focus  on  a  subset  of  files  that  are  most probably  buggy.  Our  experimental  results  show  that  MLBP-Solidity  achieves  91-99%  accuracy,  depending  on  the  type  of predicted  bug.
 
